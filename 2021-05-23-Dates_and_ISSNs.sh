@@ -8,20 +8,20 @@ sed s/"IMPORTANT[\!]*[\t][\t]"// 2021-05-23-Article_list_dirty.tsv |
 # Extrahierung der Spalten 5 (ISSN) und 12 (Date)
 cut -f 5,12 |
 
-# Bereinigung der ISSN Einträge durch Löschung von Zusätzen
+# Bereinigung der ISSN Einträge durch Löschung von Zusätzen sowie Löschung der ersten Zeile
 # Suchen und Ersetzen von beliebig vielen Buchstabenfolgen zwischen I-S in Groß- und Kleinbuchstaben, möglichen Doppelpunkten und möglichen Leerzeichen durch nichts
-sed s/[I-S]*[i-s]*[\:]*[" "]*// |
+# Suchen und Ersetzen der ersten Zeile durch nichts
+sed -e 's/[I-S]*[i-s]*[\:]*[" "]*//' -e '1d' |
 
 # Ausschluss unrelevanter Zeilen
 # Suche und Anzeige von Zeilen mit Werten von genau vier Zeichen/Jahreszahlen
 # Abkehr von 199., um theoretisch mögliche Werte wie 1984 oder 2023 nicht auszuschließen
 grep .... |
 
-# Suchen und Ersetzen der ersten Zeile durch nichts
 # Aufsteigende Sortierung
 # Ausschluss von Dopplungen
 # Ausgabe des Ergebnisses in einer TSV-Datei mit Dateinamen 2021-05-23-Dates_and_ISSNs
-sed '1d' | sort | uniq >2021-05-23-Dates_and_ISSNs.tsv
+sort | uniq >2021-05-23-Dates_and_ISSNs.tsv
 
 # Achtung: Bei der Überprüfung des Ergebnisses tauchen vier Zeilen auf, welche in der Musterlösung nicht vorhanden sind.
 # Unklar: Überlesene Filteranweisung? Andere Datengrundlage der Musterlösung? Unbemerkte/versehentliche Anreicherung der Ausgangsdatei?
