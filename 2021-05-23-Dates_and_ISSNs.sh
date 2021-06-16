@@ -22,3 +22,15 @@ grep .... |
 # Ausschluss von Dopplungen
 # Ausgabe des Ergebnisses in einer TSV-Datei mit Dateinamen 2021-05-23-Dates_and_ISSNs
 sed '1d' | sort | uniq >2021-05-23-Dates_and_ISSNs.tsv
+
+# Achtung: Bei der Überprüfung des Ergebnisses tauchen vier Zeilen auf, welche in der Musterlösung nicht vorhanden sind.
+# Unklar: Überlesene Filteranweisung? Andere Datengrundlage der Musterlösung? Unbemerkte/versehentliche Anreicherung der Ausgangsdatei?
+#$ diff ib_2021-05-23-Dates_and_ISSNs.tsv 2021-05-23-Dates_and_ISSNs.tsv
+#16d15
+#< 0018-2745     1996
+#35d33
+#< 0044-2828     1996
+#38d35
+#< 0080-4401     1995
+#48d44
+#< 0306-8374     1996
