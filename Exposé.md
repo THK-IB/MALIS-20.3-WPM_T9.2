@@ -1,6 +1,6 @@
 # Exposé T9.2.1 Python
 
-## Erstellung von Listen für die Aussonderung im Zentralen Aktenmagazin mittels Python
+## Erstellung von Übersichten für die Aussonderung im Zentralen Aktenmagazin mittels Python
 
 #### Hintergrund
 Das Zentrale Aktenmagazin verwaltet als Altregistratur und Zwischenarchiv die geschlossenen und im täglichen Betrieb nicht mehr benötigten Akten der Deutschen Welle. Diese werden nach Ablauf der Aufbewahrungsfrist ausgesondert, bewertet und falls archivwürdig, an das Bundesarchiv oder das Historische Archiv der Deutschen Welle abgegeben.
@@ -20,7 +20,7 @@ Die Daten aus dem Findbuch werden dahingehend gefiltert, dass nur _unbearbeitete
 
 Aus den bereits gefilterten Daten (unbearbeitet und mit abgelaufener Aufbewahrungsfrist) werden anschließend _alle einem Zuständigkeitsbereich zugeordneten Datensätze_ herausgegriffen und in den beiden vorab definierten _Übersichten als Exceldateien_ ausgegeben. Während erstere an die zuständige Stelle versandt wird, kommt die zweite Übersicht erst im Anschluss an den Eingang der Rückmeldung, bei der physischen Umsetzung der Aussonderung im Magazin zum Einsatz.
 
-Diese physische Aussonderung von Akten wird später mit Datum und Kassationsvermerk durch die Mitarbeitenden im Findbuch dokumentiert. Die Erstellung zukünftiger Listen erfordert durch die Änderung der Ursprungsdatei folglich die gleichen Schritte:
+Diese physische Aussonderung von Akten wird später mit Datum und Kassationsvermerk durch die Mitarbeitenden im Findbuch dokumentiert. Die Erstellung zukünftiger Ünbersichten erfordert durch die Änderung der Ursprungsdatei folglich die gleichen Schritte:
 1. Findbuch (Exceldatei) öffnen
 2. Übersichten definieren
 3. Datensätze auf noch zu bearbeitende Objekte filtern
